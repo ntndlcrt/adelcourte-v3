@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+/* -----
+* Responsive
+----- */
+@function space($value) {
+    @return math.div(100vw, $base-grid) * $value;
+}
+
+@function vw($px) {
+    $vw-context: ($base-vw * 0.01) * 1;
+    @return math.div($px, $vw-context) * 1vw;
+}
+
+@mixin responsive($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
