@@ -1,7 +1,9 @@
-@import "./require/vars";
-@import "./require/mixins";
-@import "./require/layout";
+@import './require/vars';
+@import './require/mixins';
+@import './require/layout';
 
-@import "./global/typography";
+@import './global/typography';
 
-@import "./components/cursor";
+@import './components/tag';
+@import './components/button';
+@import './components/marquee';

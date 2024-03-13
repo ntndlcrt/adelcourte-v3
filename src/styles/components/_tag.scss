@@ -1,0 +1,17 @@
+.tag {
+    font-size: vw(10);
+    line-height: 1;
+    padding: vw(8) vw(16);
+    border-radius: vw(1000);
+    border: vw(1) solid $blue;
+    width: fit-content;
+    margin: 0 auto;
+    color: $blue;
+
+    &.--available {
+        position: fixed;
+        top: vw(16);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

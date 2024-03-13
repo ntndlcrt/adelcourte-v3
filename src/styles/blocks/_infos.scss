@@ -1,0 +1,32 @@
+.infos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 space(2);
+
+    & > p {
+        font-size: vw(11);
+        opacity: 0.6;
+        width: vw(320);
+        font-feature-settings: 'ss01' off;
+        line-height: 1.3;
+
+        .line {
+            overflow: hidden;
+
+            &__inner {
+                display: block;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: vw(8);
+
+        span {
+            opacity: 0.3;
+            font-size: vw(12);
+        }
+    }
+}

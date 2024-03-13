@@ -1,0 +1,142 @@
+.about {
+    .line {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include responsive($tabletSmall) {
+            margin-bottom: 0;
+        }
+
+        &__inner {
+            font-size: 32px;
+            text-transform: uppercase;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include responsive($tabletSmall) {
+                font-size: vw(48);
+                width: 100%;
+            }
+
+            * {
+                font-feature-settings: 'ss01' off;
+            }
+
+            p {
+                display: flex;
+            }
+
+            &.--center {
+                @include responsive($tabletSmall) {
+                    justify-content: center;
+                }
+            }
+
+            &.--between {
+                justify-content: space-between;
+            }
+
+            &.--end {
+                @include responsive($tabletSmall) {
+                    justify-content: flex-end;
+                }
+            }
+
+            .symbol {
+                color: $blue;
+                line-height: 1;
+                font-feature-settings: 'ss01' on;
+                font-size: 40px;
+                margin: 0 16px;
+
+                @include responsive($tabletSmall) {
+                    font-size: vw(56);
+                    margin: 0 vw(24);
+                    transform: translateY(-#{vw(2)});
+                }
+
+                &.--off {
+                    font-feature-settings: 'ss01' off;
+                    font-size: 32px;
+                    margin: 0 12px;
+
+                    @include responsive($tabletSmall) {
+                        font-size: vw(48);
+                        margin: 0 vw(16);
+                        transform: translateY(-#{vw(4)});
+                    }
+
+                    &.--big {
+                        font-size: 40px;
+                        margin: 0 24px;
+
+                        @include responsive($tabletSmall) {
+                            font-size: vw(56);
+                            margin: 0 vw(32);
+                            transform: translateY(-#{vw(2)});
+                        }
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .spacer {
+                content: '';
+                display: block;
+                height: vw(1);
+                width: vw(64);
+                display: none;
+
+                @include responsive($tabletSmall) {
+                    display: block;
+                }
+
+                &.--small {
+                    width: vw(32);
+                }
+
+                &.--big {
+                    width: vw(160);
+                }
+            }
+
+            .separator {
+                box-sizing: content-box;
+                display: block;
+                content: '';
+                background: $blue;
+                margin: 0 vw(32);
+                height: vw(4);
+                width: vw(72);
+                display: none;
+
+                @include responsive($tabletSmall) {
+                    display: block;
+                }
+            }
+
+            .happy {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+                height: vw(calc(1.2 * 48));
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
